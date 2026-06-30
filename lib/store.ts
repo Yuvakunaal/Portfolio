@@ -6,6 +6,6 @@ interface PortfolioStore {
 }
 
 export const useStore = create<PortfolioStore>((set) => ({
-  introDone: false,
+  introDone: true,
   setIntroDone: (done) => set({ introDone: done }),
 }));

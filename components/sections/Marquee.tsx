@@ -4,15 +4,13 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useStore } from "@/lib/store";
 import { director } from "@/lib/data";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Marquee() {
   const ref = useRef<HTMLElement>(null);
-  const introDone = useStore((s) => s.introDone);
-  const show = introDone;
+  const show = true;
 
   // gsap only drives the scroll parallax of the title (no entrance — that's CSS).
   useGSAP(

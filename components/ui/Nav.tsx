@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useStore } from "@/lib/store";
 import { director } from "@/lib/data";
 
 const links = [
@@ -14,7 +13,6 @@ const links = [
 ];
 
 export default function Nav() {
-  const introDone = useStore((s) => s.introDone);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const go = (id: string) => {
@@ -30,11 +28,9 @@ export default function Nav() {
           position: "fixed",
           top: "0.65rem",
           left: "50%",
-          transform: `translateX(-50%) translateY(${introDone ? "0" : "-160%"})`,
-          opacity: introDone ? 1 : 0,
+          transform: "translateX(-50%)",
+          opacity: 1,
           zIndex: 72,
-          transition:
-            "transform 0.7s var(--ease-cine), opacity 0.7s var(--ease-cine)",
           width: "min(960px, calc(100vw - 2rem))",
         }}
       >

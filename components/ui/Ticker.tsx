@@ -1,6 +1,5 @@
 "use client";
 
-import { useStore } from "@/lib/store";
 import { director } from "@/lib/data";
 
 const ITEM = `NOW SHOWING — ${director.fullName}   ●   FOUNDER OF SQLUMINA   ●   SELECTED WORKS   ●   AI ENGINEER · PRODUCTION-GRADE SYSTEMS`;
@@ -29,8 +28,6 @@ function Group() {
 }
 
 export default function Ticker() {
-  const introDone = useStore((s) => s.introDone);
-
   return (
     <div
       aria-hidden
@@ -47,8 +44,7 @@ export default function Ticker() {
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        opacity: introDone ? 1 : 0,
-        transition: "opacity 0.8s var(--ease-cine) 0.4s",
+        opacity: 1,
         pointerEvents: "none",
       }}
     >
