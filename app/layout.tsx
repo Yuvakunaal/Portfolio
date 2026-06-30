@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   authors: [{ name: director.fullName, url: PROFILES.linkedin }],
   creator: director.fullName,
   publisher: director.fullName,
+  verification: {
+    google: "_Gyq5mirHsRjbJcyQty8rQ1xqVY6Uaa6aSCl6rUq2QI",
+  },
   keywords: [
     "Boggavarapu Yuva Satya Kunaal",
     "Kunaal",
