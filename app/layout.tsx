@@ -4,6 +4,7 @@ import "./globals.css";
 import BlobityCursor from "@/components/ui/BlobityCursor";
 import { SITE_URL, SITE_NAME, PROFILES } from "@/lib/site";
 import { director, films } from "@/lib/data";
+import { Analytics } from "@vercel/analytics/next";
 
 const fraunces = Fraunces({
   variable: "--font-display",
@@ -177,6 +178,7 @@ export default function RootLayout({
         <div className="grain" aria-hidden />
         <BlobityCursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );
