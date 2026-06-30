@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE_URL, SITE_LAST_MODIFIED } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 
+export const dynamic = "force-dynamic";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   // Accurate, verifiable lastmod (Google ignores priority & changefreq; it only

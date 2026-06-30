@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useStore } from "@/lib/store";
 import { director } from "@/lib/data";
@@ -107,7 +108,7 @@ export default function Nav() {
                 {l.label}
               </button>
             ))}
-            <a
+            <Link
               href="/blog"
               className="cursor-target nav-link"
               style={{
@@ -127,7 +128,7 @@ export default function Nav() {
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--bone-dim)")}
             >
               Writing
-            </a>
+            </Link>
           </div>
 
           {/* CTA */}
@@ -242,7 +243,7 @@ export default function Nav() {
             {l.label}
           </button>
         ))}
-        <a
+        <Link
           href="/blog"
           onClick={() => setMenuOpen(false)}
           className="display"
@@ -258,7 +259,7 @@ export default function Nav() {
           }}
         >
           Writing
-        </a>
+        </Link>
       </div>
     </>
   );
